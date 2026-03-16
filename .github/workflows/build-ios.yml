@@ -18,8 +18,9 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
+
       - name: Configure iOS project
-  run: flutter create .  
+        run: flutter create .
 
       - name: Build iOS (no codesign)
         run: flutter build ios --release --no-codesign
