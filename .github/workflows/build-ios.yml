@@ -16,11 +16,13 @@ jobs:
           sed -i '' 's/EmergencyService/dynamic/g' lib/ui/screens/home_screen.dart || true
           sed -i '' 's/const EmergencyAlertsScreen()/const SizedBox()/g' lib/ui/screens/home_screen.dart || true
           sed -i '' 's/EmergencyAlertsScreen()/const SizedBox()/g' lib/ui/screens/home_screen.dart || true
+          sed -i '' 's/const SOSScreen()/const SizedBox()/g' lib/ui/screens/home_screen.dart || true
+          sed -i '' 's/SOSScreen()/const SizedBox()/g' lib/ui/screens/home_screen.dart || true
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.29.0'
+          flutter-version: "3.29.0"
 
       - name: Install dependencies
         run: |
