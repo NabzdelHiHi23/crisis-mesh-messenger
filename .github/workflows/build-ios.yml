@@ -14,6 +14,7 @@ jobs:
       - name: Fix broken Dart code
         run: |
           sed -i '' 's/EmergencyService/dynamic/g' lib/ui/screens/home_screen.dart || true
+          sed -i '' 's/const EmergencyAlertsScreen()/const SizedBox()/g' lib/ui/screens/home_screen.dart || true
           sed -i '' 's/EmergencyAlertsScreen()/const SizedBox()/g' lib/ui/screens/home_screen.dart || true
 
       - name: Setup Flutter
